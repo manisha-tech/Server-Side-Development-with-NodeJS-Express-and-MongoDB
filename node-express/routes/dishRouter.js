@@ -25,9 +25,10 @@ dishRouter.route('/')
     res.end('Deleting all dishes');
 });
 
-//Updating the Node module named dishRouter.js to implements the Express router for the /dishes/:dishId REST API end point.
 
-dishRouter.route('/')
+
+
+dishRouter.route('/:dishId')
 .get((req,res,next) => {
     res.end('Will send details of the dish: ' + req.params.dishId +' to you!');
 })
